@@ -22,6 +22,8 @@ Run the following command:
 
 ```bash
 kubectl apply -f mongo-secret.yml
+```
+---
 
 ### <h2>2. Create a ConfigMap</h2>
 
@@ -31,9 +33,10 @@ Run the following command:
 
 ```bash
 kubectl apply -f mongo-configmap.yml
+```
+---
 
-
-### <h2>3. Create a deployment for mongodb and mongo-express</h2>
+### 3. Create a deployment for mongodb and mongo-express
 
 And then create deployment 
 
@@ -41,9 +44,13 @@ Run the following command:
 
 ```bash
 kubectl apply -f mongo.yml
+```
+---
 
 ```bash
 kubectl apply -f mongo.-express.yml
+```
+---
 
 And get the service details to find the NodePort by following command
 
@@ -51,5 +58,7 @@ minikube service {service name}
 
 ```bash
 minikube service mongo-express-service
+```
+
 
 Finally you can test with the output url from above command 
